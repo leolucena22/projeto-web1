@@ -1,0 +1,66 @@
+.proposal-timeline {
+  position: relative;
+  padding: var(--space-2) 0;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  gap: var(--space-4);
+  padding-bottom: var(--space-5);
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  z-index: 1;
+  border: 1px solid var(--timeline-color, var(--color-border));
+}
+
+.timeline-line {
+  position: absolute;
+  left: 16px;
+  top: 32px;
+  bottom: 0;
+  width: 1px;
+  background: var(--color-border);
+}
+
+.timeline-content {
+  flex: 1;
+  padding-top: var(--space-1);
+}
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-1);
+}
+
+.timeline-user {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.timeline-time {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.timeline-message {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
