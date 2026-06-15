@@ -1,0 +1,14 @@
+.vat-chart {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.vat-chart-svg {
+  width: 100%;
+  max-height: 260px;
+}
+
+.vat-chart-empty {
+  padding: var(--space-8);
+  text-align: center;
+}

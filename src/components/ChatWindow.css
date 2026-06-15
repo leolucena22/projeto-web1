@@ -1,0 +1,186 @@
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.chat-window:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary-light);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-tertiary);
+}
+
+.chat-header-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.chat-header-info h4 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.chat-header-info span {
+  font-size: var(--font-size-xs);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.chat-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background: var(--color-bg-primary);
+}
+
+.chat-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.chat-bubble {
+  max-width: 70%;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  box-shadow: var(--shadow-sm);
+  animation: chatBubbleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes chatBubbleIn {
+  from {
+    transform: translateY(10px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.chat-bubble.own {
+  align-self: flex-end;
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-xs);
+}
+
+.chat-bubble.other {
+  align-self: flex-start;
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  border-bottom-left-radius: var(--radius-xs);
+}
+
+.chat-bubble-time {
+  display: block;
+  font-size: 10px;
+  margin-top: var(--space-2);
+  opacity: 0.7;
+  text-align: right;
+}
+
+.chat-bubble.own .chat-bubble-time {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.chat-bubble.other .chat-bubble-time {
+  color: var(--color-text-secondary);
+}
+
+/* Custom rounded input bar */
+.chat-input-bar {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-tertiary);
+  align-items: center;
+}
+
+.chat-input-bar .form-input {
+  flex: 1;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-bg-secondary);
+  font-size: var(--font-size-sm);
+  transition: border-color var(--transition-fast);
+}
+
+.chat-input-bar .form-input:focus {
+  border-color: var(--color-primary);
+}
+
+/* Beautiful circular send button */
+.btn-send-round {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-send-round:hover {
+  transform: translateY(-1px);
+  background: var(--color-primary-light);
+  box-shadow: 0 4px 12px rgba(197, 108, 86, 0.35);
+}
+
+.btn-send-round:active {
+  transform: translateY(0);
+}
+
+.chat-expired-banner {
+  padding: var(--space-3) var(--space-5);
+  text-align: center;
+  background: var(--color-error-bg);
+  color: var(--color-error);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border-top: 1px solid var(--color-border);
+}
