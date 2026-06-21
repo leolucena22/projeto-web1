@@ -16,14 +16,14 @@ Um marketplace de moda sustentável onde você compra, vende e negocia roupas co
 
 ## Screenshots
 
-![Home Page](./public/screenshots/home.png)
-![Explorar Anúncios](./public/screenshots/explore.png)
-![Garagem](./public/screenshots/garage.png)
-![Dashboard de Negociações](./public/screenshots/negotiations.png)
-![Chat de Negociação](./public/screenshots/chat.png)
-![Página de Compra](./public/screenshots/compra.png)
-![Carteira Digital](./public/screenshots/wallet.png)
-![Perfil do Usuário](./public/screenshots/profile.png)
+![Home Page](./public/screenshots/home.svg)
+![Explorar Anúncios](./public/screenshots/explore.svg)
+![Garagem](./public/screenshots/garage.svg)
+![Dashboard de Negociações](./public/screenshots/negotiations.svg)
+![Chat de Negociação](./public/screenshots/chat.svg)
+![Página de Compra](./public/screenshots/compra.svg)
+![Carteira Digital](./public/screenshots/wallet.svg)
+![Perfil do Usuário](./public/screenshots/profile.svg)
 
 ## Como Instalar e Rodar
 
